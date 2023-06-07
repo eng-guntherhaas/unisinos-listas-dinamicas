@@ -35,6 +35,17 @@ public class LinkedQueue<T> implements Queue<T> {
         return data;
     }
 
+    @Override
+    public T front() throws UnderflowException {
+        return null;
+    }
+
+    @Override
+    public T back() throws UnderflowException {
+        return null;
+    }
+
+
     public T peek() {
         if (isEmpty()) {
             throw new NoSuchElementException("Queue is empty");
@@ -44,5 +55,15 @@ public class LinkedQueue<T> implements Queue<T> {
 
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    @Override
+    public boolean isFull() {
+        return false;
+    }
+
+    @Override
+    public int numElements() {
+        return 0;
     }
 }

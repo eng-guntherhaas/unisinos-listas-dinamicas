@@ -31,6 +31,11 @@ public class LinkedStack<T> implements Stack<T> {
         return data;
     }
 
+    @Override
+    public T top() throws UnderflowException {
+        return null;
+    }
+
     public T peek() {
         if (isEmpty()) {
             throw new NoSuchElementException("Stack is empty");
@@ -40,5 +45,15 @@ public class LinkedStack<T> implements Stack<T> {
 
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    @Override
+    public boolean isFull() {
+        return false;
+    }
+
+    @Override
+    public int numElements() {
+        return 0;
     }
 }
